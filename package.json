@@ -1,0 +1,33 @@
+{
+  "name": "wxss-cli",
+  "version": "1.0.0",
+  "description": "compile less or scss into wxss",
+  "bin": {
+    "wxss": "bin/wxss.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/echo008/wxss-cli.git"
+  },
+  "keywords": [
+    "less",
+    "scss",
+    "wxss"
+  ],
+  "author": "Echo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/echo008/wxss-cli/issues"
+  },
+  "homepage": "https://github.com/echo008/wxss-cli#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "chokidar": "^2.0.4",
+    "commander": "^2.16.0",
+    "less": "^3.0.4"
+  }
+}
