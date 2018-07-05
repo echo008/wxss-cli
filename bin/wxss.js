@@ -15,7 +15,10 @@ program
   .action(dir => {
     fs.stat(dir, (err, stats) => {
       if (err) console.log(chalk.yellow(err))
-      else watch(dir)
+      else {
+        console.log(chalk.bgMagenta.white(' wxss is running... '))
+        watch(dir)
+      }
     })
   })
 
