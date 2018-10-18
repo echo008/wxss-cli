@@ -13,8 +13,6 @@ $ npm install -g wxss-cli
 $ wxss ./minicode
 ```
 
-### 如有什么问题和想法，可以加我微信(15012851811)，加我请注明信息
-
 ### 如果觉得不错，请动动您的小拇指，star一下
 
 ## License
