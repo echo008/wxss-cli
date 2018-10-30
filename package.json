@@ -1,6 +1,6 @@
 {
   "name": "wxss-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "compile less or scss into wxss",
   "bin": {
     "wxss": "bin/wxss.js"
