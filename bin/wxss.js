@@ -8,18 +8,22 @@ const watch = require('../lib/watch.js')
 
 program
   .version(require('../package').version)
-  .usage('<path>')
+  .usage('<path> [other-path...]')
 
 program
-  .arguments('<path>')
-  .action(dir => {
-    fs.stat(dir, (err, stats) => {
-      if (err) console.log(chalk.yellow(err))
-      else {
-        console.log(chalk.bgMagenta.white(' wxss is running... '))
-        watch(dir)
-      }
-    })
+  .arguments('<path> [other-path...]')
+  .action((frist, others) => {
+    const dirs = [frist, ...(others || [])];
+    dirs.forEach(dir => {
+      fs.stat(dir, (err, stats) => {
+        if (err) console.log(chalk.yellow(err))
+        else {
+          console.log(chalk.white(`watching ${dir} ... `))
+          watch(dir)
+        }
+      })
+    });
+    console.log(chalk.bgMagenta.white(' wxss is running... '))
   })
 
 program
